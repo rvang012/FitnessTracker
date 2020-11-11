@@ -1,4 +1,4 @@
-# fitnesstracker
+# Fitness Tracker
 
 ## Description
 THis is an application to track the User's fitness progress. The user can input a new workout or continue a new one and it should update the fitness graphs.
