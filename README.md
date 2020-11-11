@@ -4,7 +4,7 @@
 THis is an application to track the User's fitness progress. The user can input a new workout or continue a new one and it should update the fitness graphs.
 ## Usage
 When the user opens the application, the user can select new workout or continue workout depending on the User. Once the user input the information in either the cardio or resistence section, then the data will generate a graph. 
-<img src= "https://drive.google.com/file/d/1zzv_R48ixGOg12UPM-eoRMrxscjCdbbl/view?usp=sharing">
+<img src= "https://github.com/rvang012/FitnessTracker/blob/main/fitnesstrackersc.PNG?raw=true">
 
 ## Credits
 My classmates who helped me on working on this project.
