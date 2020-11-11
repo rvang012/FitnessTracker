@@ -1,17 +1,19 @@
 const express = require("express");
 const router = express.Router();
-const db = require("../models/fitnessmodel");
+const Workout = require("../models/fitnessmodel");
 
 router.get("/workouts", (req, res) => {
-    db.find({}).sort({ date: -1 }).then(dbWorkout => {
+  Workout.find({}).sort({ date: -1 }).then(dbWorkout => {
         console.log(dbWorkout)
         res.json(dbWorkout);
     }).catch(err => {
         res.status(400).json(err);
     });
 });
+
 router.post("/workouts", (req, res) => {
-    db.create({})
+  console.log("post");
+  Workout.create({})
     .then(dbWorkout => {
       res.json(dbWorkout)
     })
@@ -20,7 +22,7 @@ router.post("/workouts", (req, res) => {
     })
 });
 router.put("/workouts/:id", function(req, res) {
-    db.findByIdAndUpdate(
+  Workout.findByIdAndUpdate(
       req.params.id,
       { $push: { exercises: req.body } },
       { new: true }
@@ -33,7 +35,7 @@ router.put("/workouts/:id", function(req, res) {
       });
   });
 router.get("/workouts/range", (req, res) => {
-    db.find({}).then(dbWorkout => {
+  Workout.find({}).then(dbWorkout => {
         res.json(dbWorkout);
     }).catch(err => {
         res.status(400).json(err);

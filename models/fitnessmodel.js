@@ -54,6 +54,6 @@ fitnessSchema.virtual("totalDistance").get(function() {
       return total + exercise.distance;
   }, 0);
 });
-const Workout = mongoose.model("Workout", fitnessSchema);
+const Workout = mongoose.model("workout", fitnessSchema);
 
 module.exports = Workout;
